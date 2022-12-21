@@ -1,0 +1,195 @@
+body{
+    background: linear-gradient(90deg,rgb(228,10,46),white,green,rgb(54,200,54),violet);
+    background-size: 100%;
+    position: relative;
+}
+.main-container{
+    width: 1500px;
+    height: 300px;
+    display: flex;
+    position: relative;
+}
+.container{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    margin: 50px;
+    border: 2px solid black;
+    position: relative;
+}
+
+#A:active{
+    animation-name: demo1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes demo1 {
+    0%{
+        border-radius: 0%;
+    }
+    100%{
+        border-radius: 50%;
+        background: radial-gradient(circle,blue 25%,gray 15%,green 60%);
+    }
+}
+
+#B:active{
+    animation-name: demo2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes demo2 {
+    0%{
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        transform: rotate(0deg);
+    }
+    100%{
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: rotate(360deg);
+    }
+}
+
+#C:active{
+    animation-name: demo3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes demo3 {
+    0%{
+        border-radius: 0%;
+        transform: skew(0deg);
+    }
+    100%{
+        border-radius: 50%;
+        transform: skew(45deg);
+
+    }
+    
+}
+#D:active{
+    animation-name: demo4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes demo4 {
+    0%{
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    100%{ border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+
+    }
+}
+
+#my-para{
+    position: relative;
+    top: 20px;
+}
+
+#para2{
+    position: relative;
+    top: 50px;
+}
+
+#my-para:active{
+    animation-name: demo5;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+
+}
+@keyframes demo5 {
+      0%{
+        font-size: auto;
+        font-style: normal;
+      }
+
+      100%{
+        font-size: 30px;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+}
+
+#para2:active{
+    animation-name: demo6;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+
+}
+@keyframes demo6{
+    0%{
+        font-size: auto;
+        font-style: normal;
+    }
+    100%{
+        font-size: 30px;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: line-through;
+    }
+}
+
+#image{
+    position: relative;
+    top: 50px;
+    width: 300px;
+    height: 150px;
+    transition: width 3s, ease 2s ;
+}
+#image:hover{
+    width: 1000px;
+}
+
+@media only screen and (max-width:800px) {
+
+    .main-container{
+        width: 500px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: auto;
+        position: relative;
+        margin-left: 100px;
+    }
+
+    .container{
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        background-color: green;
+        border-radius: 2px solid black;
+        position: relative;
+    }
+    #my-para{
+        display: grid;
+        grid-template-columns: 200px;
+        position: relative;
+        top: 100px;
+    }
+    #para2{
+        display: grid;
+        grid-template-columns: 250px;
+        position: relative;
+        top: 100px;
+    }
+    #image{
+        width: 100px;
+        height: 100px;
+        display: grid;
+        grid-template-columns: auto;
+        position: relative;
+        top: 100px;
+    }
+}
